@@ -56,5 +56,18 @@ public class BallController : MonoBehaviour
             this.ScoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
 
         }
+        if (other.gameObject.tag == "SmallCloudTag")
+        {
+            // スコアを加算(追加)
+            this.score += 5;
+            this.ScoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
+
+        }
+        if (other.gameObject.tag == "LargeCloudTag")
+        {
+            // スコアを加算(追加)
+            this.score += 10;
+            this.ScoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
+        }
     }
 }
